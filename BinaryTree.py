@@ -19,7 +19,7 @@ def createBinaryTree(arr):
     while que:
         node = que.popleft()
         level_max = max(node.level, level_max)
-        if i<len(arr) and arr[i]:
+        if i<len(arr) and arr[i]!=None:
             left = Tree(arr[i], node.level+1)
             que.append(left)
             node.left = left
